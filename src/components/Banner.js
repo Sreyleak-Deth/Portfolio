@@ -11,8 +11,8 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [setIndex] = useState(1);
-  const toRotate = ["MobileDeveloper"];
+  const [index, setIndex] = useState(1);
+  const toRotate = ["Mobile Developer", "UI/UX Designer", "Web Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -21,12 +21,14 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [text, delta])
 
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    let updatedText = isDeleting 
+      ? fullText.substring(0, text.length - 1) 
+      : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
@@ -57,9 +59,14 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Sreyleak`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Mobile Developer"]'><span className="wrap">{text}</span></span></h1>
-                  <p>I specialize in mobile development and also possess knowledge in web development, UI/UX design, and backend technologies. This broad skill set enables me to create well-rounded solutions that span various areas of expertise.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>{`Hi! I'm Sreyleak`} <span className="wrap">{text}</span></h1>
+                <p>I specialize in mobile development and also possess knowledge in web development, UI/UX design, and backend technologies. This broad skill set enables me to create well-rounded solutions that span various areas of expertise.</p>
+                <button 
+                  onClick={() => window.location.href='#connect'}
+                  aria-label="Let's Connect"
+                >
+                  Let's Connect <ArrowRightCircle size={25} />
+                </button>
               </div>}
             </TrackVisibility>
           </Col>
@@ -67,7 +74,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Mobile Developer Illustration"/>
                 </div>}
             </TrackVisibility>
           </Col>
