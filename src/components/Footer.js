@@ -12,7 +12,7 @@ export const Footer = () => {
           <Newsletter />
           <Col sm={12} className="text-center">
             <div className="social-icon">
-              <a href="https://github.com/leak17" target='_blank' ><img src={github} alt="Icon" /></a>
+              <a href="https://github.com/Sreyleak-Deth" target='_blank' ><img src={github} alt="Icon" /></a>
               <a href="https://www.facebook.com/profile.php?id=100090944314911&mibextid=ZbWKwL" target='_blank'><img src={facebook} alt="Icon" /></a>
               <a href="https://instagram.com/se_jeongdev?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target='_blank'><img src={instagram} alt="Icon" /></a>
             </div>

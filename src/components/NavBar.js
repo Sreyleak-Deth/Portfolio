@@ -35,7 +35,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home" className="navbar-brand">
-            <h1>SREYLEAK</h1>
+          <h1 style={{ color: '#FFFFFF' }}>SREYLEAK</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -69,7 +69,7 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://github.com/leak17" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Sreyleak-Deth" target="_blank" rel="noopener noreferrer">
                   <img src={github} alt="GitHub" />
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=100090944314911&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
