@@ -9,7 +9,7 @@ export const Projects = () => {
   const { mobile_app, ui_ux, web, backend } = projectsData;
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -54,6 +54,7 @@ export const Projects = () => {
                             title={project.title}
                             description={project.description}
                             imgUrl={project.imgUrl}
+                            githubUrl={project.githubUrl}
                           />
                         ))}
                       </Row>                    
@@ -66,6 +67,7 @@ export const Projects = () => {
                             title={project.title}
                             description={project.description}
                             imgUrl={project.imgUrl}
+                            githubUrl={project.githubUrl}
                           />
                         ))}
                       </Row>                    
@@ -78,6 +80,7 @@ export const Projects = () => {
                             title={project.title}
                             description={project.description}
                             imgUrl={project.imgUrl}
+                            githubUrl={project.githubUrl}
                           />
                         ))}
                       </Row>                    
