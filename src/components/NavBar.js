@@ -22,7 +22,7 @@ export const NavBar = () => {
       }
     }
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
@@ -35,7 +35,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home" className="navbar-brand">
-          <h1 style={{ color: '#FFFFFF' }}>SREYLEAK</h1>
+            <h1 style={{ color: '#FFFFFF' }}>SREYLEAK</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -46,7 +46,6 @@ export const NavBar = () => {
                 href="#home" 
                 className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
                 onClick={() => onUpdateActiveLink('home')}
-                aria-label="Home"
               >
                 Home
               </Nav.Link>
@@ -54,7 +53,6 @@ export const NavBar = () => {
                 href="#skills" 
                 className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
                 onClick={() => onUpdateActiveLink('skills')}
-                aria-label="Skills"
               >
                 Skills
               </Nav.Link>
@@ -62,25 +60,30 @@ export const NavBar = () => {
                 href="#projects" 
                 className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
                 onClick={() => onUpdateActiveLink('projects')}
-                aria-label="Projects"
               >
                 Projects
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
-              <div className="social-icon">
-                <a href="https://github.com/Sreyleak-Deth" target="_blank" rel="noopener noreferrer">
-                  <img src={github} alt="GitHub" />
+              <div className="social-icon-group">
+                <a href="https://github.com/Sreyleak-Deth" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <div className="social-icon">
+                    <img src={github} alt="GitHub" />
+                  </div>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100090944314911&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-                  <img src={facebook} alt="Facebook" />
+                <a href="https://www.facebook.com/profile.php?id=100090944314911&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <div className="social-icon">
+                    <img src={facebook} alt="Facebook" />
+                  </div>
                 </a>
-                <a href="https://instagram.com/se_jeongdev?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank" rel="noopener noreferrer">
-                  <img src={instagram} alt="Instagram" />
+                <a href="https://instagram.com/se_jeongdev?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <div className="social-icon">
+                    <img src={instagram} alt="Instagram" />
+                  </div>
                 </a>
               </div>
               <HashLink to='#connect'>
-                <button className="vvd" aria-label="Let's Connect">
+                <button className="vvd">
                   <span>Let's Connect</span>
                 </button>
               </HashLink>

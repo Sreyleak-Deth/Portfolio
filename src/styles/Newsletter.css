@@ -1,0 +1,121 @@
+.quote-container {
+    perspective: 1000px;
+    margin-bottom: 80px;
+  }
+  
+  .quote-bx {
+    background: linear-gradient(135deg, rgba(170, 54, 124, 0.1) 0%, rgba(74, 47, 189, 0.1) 100%);
+    border-radius: 30px;
+    padding: 60px 80px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+  
+  .quote-bx:hover {
+    transform: translateY(-5px) rotateX(1deg);
+    box-shadow: 0 15px 40px rgba(170, 54, 124, 0.3);
+  }
+  
+  .quote-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .quote-content h3 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    position: relative;
+  }
+  
+  .highlight {
+    background: linear-gradient(90deg, #AA367C, #4A2FBD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  
+  .quote-mark {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+  }
+  
+  .quote-mark.left {
+    top: 20px;
+    left: 30px;
+  }
+  
+  .quote-mark.right {
+    bottom: 20px;
+    right: 30px;
+  }
+  
+  .quote-author {
+    text-align: right;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* Animation */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .quote-bx::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #AA367C, #4A2FBD);
+    z-index: -1;
+    border-radius: 32px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .quote-bx:hover::after {
+    opacity: 0.3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .quote-bx {
+      padding: 40px 30px;
+    }
+    
+    .quote-content h3 {
+      font-size: 1.4rem;
+    }
+    
+    .quote-mark {
+      font-size: 5rem;
+    }
+    
+    .quote-mark.left {
+      top: 10px;
+      left: 15px;
+    }
+    
+    .quote-mark.right {
+      bottom: 10px;
+      right: 15px;
+    }
+  }
+  
