@@ -47,7 +47,7 @@ export const Footer = () => {
                 </div>
               </a>
             </div>
-            <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
+            <p>Copyright 2022. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
